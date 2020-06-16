@@ -5,12 +5,14 @@ const NavBar: any = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eceff1;
+  background-color: #9c88ff;
+  border-radius: 16px;
+  margin: 1em;
 `;
 
 NavBar.NavLink = styled(NavLink)`
   margin: 1em;
-  font-size: 2em;
+  font-size: 1.2em;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
   text-decoration: none;
