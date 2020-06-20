@@ -1,10 +1,15 @@
 const generateData = () => {
-  const db = { todos: []}
+  const todos = []
 
-  for (let i = 0; i < 3; i++) {
-    db.todos.push({ id: i, name: `task number: ${i}` })
+  for (let i = 0; i < 4; i++) {
+    todos.push({ 
+      id: Math.random().toString(36).substr(2, 5), 
+      name: `My todo task number: ${i}`, 
+      date: Date.now(),
+      statusDone: false
+    })
   }
-  return db
+  return { todos }
 }
 
 module.exports = {
