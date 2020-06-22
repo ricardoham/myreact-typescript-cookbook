@@ -9,7 +9,7 @@ const generateData = () => {
       statusDone: false
     })
   }
-  return { todos }
+  return todos 
 }
 
 module.exports = {
