@@ -1,7 +1,7 @@
 const generateData = () => {
   const todos = []
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 10; i++) {
     todos.push({ 
       id: Math.random().toString(36).substr(2, 5), 
       name: `My todo task number: ${i}`, 
