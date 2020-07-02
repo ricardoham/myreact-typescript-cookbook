@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AccordionHeader from './AccordionHeader';
+import AccordionSection from './AccordionSection';
 
 import { AccordionContainer } from './styles';
 
@@ -18,9 +19,36 @@ interface AccordionItems {
 const Accordion = ({ children, items, title, content }: Props) => {
   const [collapase, setCollapse] = useState(false);
 
+  const renderSections = () => (
+    items?.map((section: AccordionItems) => (
+      <>
+        <AccordionHeader 
+          title={section.title} 
+          onShowSection={handleAccordionSection} 
+        />
+        <AccordionSection content={section.content} />
+      </>
+    ))
+  )
+
+  const handleAccordionSection = () => {
+    setCollapse(!collapase)
+  }
+
   return (
     <AccordionContainer>
-      <AccordionHeader title={title} />
+      { 
+        (items && items.length > 0)
+          ? renderSections()
+          :
+          <>
+            <AccordionHeader 
+              title={title || ""}  
+              onShowSection={handleAccordionSection} 
+            />
+            <AccordionSection content={content} />
+          </>
+      }
     </AccordionContainer>
   )
 }

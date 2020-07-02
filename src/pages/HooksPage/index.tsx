@@ -1,4 +1,5 @@
 import React from 'react';
+import Accordion from '../../components/Accordion';
 
 const HooksPage = () => {
   return (
@@ -11,6 +12,7 @@ const HooksPage = () => {
              with purpose to bring functionalities that class component have to Functional Components.
              Bellow we see some examples:
         </p>
+        <Accordion />
       </article>
     </section>
   )
