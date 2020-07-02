@@ -26,7 +26,7 @@ const Accordion = ({ children, items, title, content }: Props) => {
           title={section.title} 
           onShowSection={handleAccordionSection} 
         />
-        <AccordionSection content={section.content} />
+        <AccordionSection content={section.content} showSection={collapase} />
       </>
     ))
   )
@@ -46,7 +46,15 @@ const Accordion = ({ children, items, title, content }: Props) => {
               title={title || ""}  
               onShowSection={handleAccordionSection} 
             />
-            <AccordionSection content={content} />
+            {
+            children 
+              ? 
+              <AccordionSection showSection={collapase}>
+                {children} 
+              </AccordionSection> 
+              : 
+            <AccordionSection content={content} showSection={collapase} />
+            }
           </>
       }
     </AccordionContainer>

@@ -12,7 +12,9 @@ const HooksPage = () => {
              with purpose to bring functionalities that class component have to Functional Components.
              Bellow we see some examples:
         </p>
-        <Accordion />
+        <Accordion title="State Hook">
+          <span> TEST </span>
+        </Accordion>
       </article>
     </section>
   )
