@@ -1,5 +1,6 @@
 import React from 'react';
 import Accordion from '../../components/Accordion';
+import StateHookNinjaTurtles from '../HooksPage/StateHook'
 
 const HooksPage = () => {
   return (
@@ -13,7 +14,7 @@ const HooksPage = () => {
              Bellow we see some examples:
         </p>
         <Accordion title="State Hook">
-          <span> TEST </span>
+          <StateHookNinjaTurtles />
         </Accordion>
       </article>
     </section>
