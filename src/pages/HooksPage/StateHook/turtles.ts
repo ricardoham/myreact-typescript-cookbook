@@ -1,4 +1,9 @@
-const turtles = [
+export interface NinjaTurtle {
+  image?: string,
+  name: string, 
+}
+
+export const turtles = [
   {
     image: 'donatello',
     name: 'Donatello'
@@ -16,5 +21,3 @@ const turtles = [
     name: 'Raphael'
   }
 ];
-
-export default turtles;
