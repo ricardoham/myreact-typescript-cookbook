@@ -25,8 +25,8 @@ const StateHookNinjaTurtles = () => {
       <Section>
       {
         turtles.map((turtle, index) => (
-          <>
-            <Turtle
+          <Turtle key={index}>
+            <Turtle.Img
               key={index}
               src={`/images/ninja_turtles/${
                 isChecked(turtle.name) ? turtle.image : `${turtle.image}_outline`
@@ -34,7 +34,7 @@ const StateHookNinjaTurtles = () => {
               onClick={() => handleSelectTurtle(turtle.name)}
             />
             <Turtle.Name>{turtle.name}</Turtle.Name>
-          </>
+          </Turtle>
         ))
       }
     </Section>
