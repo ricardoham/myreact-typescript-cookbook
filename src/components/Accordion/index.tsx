@@ -22,7 +22,8 @@ const Accordion = ({ children, items, title, content }: Props) => {
   const renderSections = () => (
     items?.map((section: AccordionItems) => (
       <>
-        <AccordionHeader 
+        <AccordionHeader
+          isRotate={collapase}
           title={section.title} 
           onShowSection={handleAccordionSection} 
         />
@@ -44,7 +45,8 @@ const Accordion = ({ children, items, title, content }: Props) => {
           <>
             <AccordionHeader 
               title={title || ""}  
-              onShowSection={handleAccordionSection} 
+              onShowSection={handleAccordionSection}
+              isRotate={collapase}
             />
             {
             children 
