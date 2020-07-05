@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './routes';
-import StyledGlobal from './globalStyles'
+import StyledGlobal from './globalStyles';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <StyledGlobal />
-    <Routes />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <StyledGlobal />
+        <Routes />
+    </React.StrictMode>,
+    document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
