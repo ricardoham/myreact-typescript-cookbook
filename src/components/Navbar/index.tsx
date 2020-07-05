@@ -9,6 +9,9 @@ const Navbar = () => (
     <NavBar.NavLink to="/hooks">
       Hooks
     </NavBar.NavLink>
+    <NavBar.NavLink to="/portals">
+      React Portals
+    </NavBar.NavLink>
   </NavBar>
 );
 
