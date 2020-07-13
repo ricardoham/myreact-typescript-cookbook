@@ -10,10 +10,12 @@ const PortalsPage = () => {
         <header>Here a Example of React Portals:</header>
         <h4>Modal</h4>
         <Modal showModal={showModal} onCloseModal={() => setShowModal(false)} />
-        <button type="button" onClick={() => setShowModal(true)}>Show Modal</button>
+        <button type="button" onClick={() => setShowModal(true)}>
+          Show Modal
+        </button>
       </article>
     </section>
-  )
+  );
 };
 
 export default PortalsPage;
