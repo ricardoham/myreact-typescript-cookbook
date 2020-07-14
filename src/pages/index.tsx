@@ -1,5 +1,10 @@
 import React from 'react';
+import Switch from '../components/Switch';
 
-const Home = () => <div>Home Works!</div>;
+const Home = () => (
+  <div>
+    <Switch />
+  </div>
+);
 
 export default Home;
