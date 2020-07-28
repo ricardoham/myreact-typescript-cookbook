@@ -5,9 +5,10 @@ const Navbar = () => (
   <NavBar>
     <NavBar.NavLink exact to="/">
       Home
-        </NavBar.NavLink>
+    </NavBar.NavLink>
     <NavBar.NavLink to="/hooks">Hooks</NavBar.NavLink>
     <NavBar.NavLink to="/portals">React Portals</NavBar.NavLink>
+    <NavBar.NavLink to="/forms">Forms Example</NavBar.NavLink>
   </NavBar>
 );
 
