@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, Form, Formik } from 'formik';
+import { Field, Form, Formik, FormikValues } from 'formik';
 import { UserModel } from '../../models/user';
 import { FormsExampleContent } from './styles';
 interface Props {
@@ -12,11 +12,16 @@ const FormsExample = ({ users }: Props) => {
     surName: users.surName || '',
     age: users.age || 0,
   };
+
+  const handleSubmit = () => {
+    console.log('Form Submit');
+  };
+
   return (
     <FormsExampleContent>
       <h3>Forms Example</h3>
-      <Formik initialValues={initialValues}>
-        {({ values }) => (
+      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+        {({ values }: FormikValues) => (
           <Form>
             <Field>
               <input />
