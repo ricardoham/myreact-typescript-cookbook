@@ -1,10 +1,15 @@
 import React from 'react';
 import { SwitchContainer, SwitchPoint } from './styles';
 
-const Switch = () => {
+interface Props {
+  toggle: boolean;
+  onClick: () => void;
+}
+
+const Switch = ({ toggle, onClick }: Props) => {
   return (
-    <SwitchContainer>
-      <SwitchPoint />
+    <SwitchContainer onClick={onClick}>
+      <SwitchPoint toggle={toggle} />
     </SwitchContainer>
   );
 };
