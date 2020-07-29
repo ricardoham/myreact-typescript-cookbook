@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
-interface StyledProps {}
+interface StyledProps {
+  fill: string;
+  color: string;
+}
 
 const StyledButton = styled.button<StyledProps>`
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 `;
 
 export { StyledButton };

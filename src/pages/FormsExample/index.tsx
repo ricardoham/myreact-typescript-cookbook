@@ -1,16 +1,17 @@
 import React from 'react';
-import { Field, Form, Formik, FormikValues } from 'formik';
+import { Field, Formik, FormikValues } from 'formik';
 import { UserModel } from '../../models/user';
-import { FormsExampleContent } from './styles';
+import { FormsExampleContent, Form } from './styles';
+import Button from '../../components/Button';
 interface Props {
-  users: UserModel;
+  users?: UserModel;
 }
 
 const FormsExample = ({ users }: Props) => {
   const initialValues = {
-    name: users.name || '',
-    surName: users.surName || '',
-    age: users.age || 0,
+    name: users?.name || '',
+    surName: users?.surName || '',
+    age: users?.age || 0,
   };
 
   const handleSubmit = () => {
@@ -23,9 +24,10 @@ const FormsExample = ({ users }: Props) => {
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         {({ values }: FormikValues) => (
           <Form>
-            <Field>
-              <input />
-            </Field>
+            <Field name="name" placeholder="First Name" />
+            <Field name="surName" placeholder="Sur Name" />
+            <Field name="age" placeholder="Age" />
+            <Button color="primary" fill="filled" type="submit" onClick={handleSubmit} text="Submit" />
           </Form>
         )}
       </Formik>

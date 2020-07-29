@@ -12,7 +12,11 @@ export interface ButtonProps {
 }
 
 const Button = ({ type, fill, color, text, icon, children, onClick }: ButtonProps) => {
-  return <StyledButton type={!type ? 'button' : type}>{text}</StyledButton>;
+  return (
+    <StyledButton type={!type ? 'button' : type} fill={fill} color={color} onClick={onClick}>
+      {text || children}
+    </StyledButton>
+  );
 };
 
 export default Button;
