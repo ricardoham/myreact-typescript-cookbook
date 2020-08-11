@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { RemoveIcon, StyledTag } from './styles';
 
 interface Props {
   tags?: string[];
