@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledLabel } from './styles';
 
 interface Props {
-  id?: number;
+  id?: string;
   label?: string;
   name: string;
   hasError?: boolean;

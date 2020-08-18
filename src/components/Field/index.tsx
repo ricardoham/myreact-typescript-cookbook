@@ -1,5 +1,6 @@
 import React from 'react';
 import { useField } from 'formik';
+import Label from '../Label';
 
 interface Props {
   name: string;
@@ -11,7 +12,16 @@ interface Props {
 const CustomFormikField = ({ id, name, label, children, ...props }: Props) => {
   const [field, meta] = useField({ ...props, name });
 
-  return <div>works</div>;
+  return (
+    <>
+      {label && <Label id={id} name={name} label={label} />}
+      {children &&
+        React.cloneElement(children, {
+          ...children.props,
+          ...field,
+        })}
+    </>
+  );
 };
 
 export default CustomFormikField;
