@@ -1,6 +1,7 @@
 import React from 'react';
 import { useField } from 'formik';
 import Label from '../Label';
+import { ErrorMessage } from './styles';
 
 interface Props {
   name: string;
@@ -20,6 +21,7 @@ const CustomFormikField = ({ id, name, label, children, ...props }: Props) => {
           ...children.props,
           ...field,
         })}
+      {meta.touched && meta.error && <ErrorMessage>{meta.error}</ErrorMessage>}
     </>
   );
 };
