@@ -1,8 +1,11 @@
 import React from 'react';
-import { Field, Formik, FormikValues } from 'formik';
-import { UserModel } from '../../models/user';
+import { Formik, FormikValues } from 'formik';
+import * as yup from 'yup';
+import { UserModel } from 'models/user';
 import { FormsExampleContent, Form } from './styles';
-import Button from '../../components/Button';
+import Button from 'components/Button';
+import Field from 'components/Field';
+import Input from 'components/Input';
 interface Props {
   users?: UserModel;
 }
@@ -14,6 +17,12 @@ const FormsExample = ({ users }: Props) => {
     age: users?.age || 0,
   };
 
+  const validationSchema = yup.object().shape({
+    name: yup.string().required('Name is required'),
+    surName: yup.string().required('Surname is required'),
+    age: yup.number().required('Age is required'),
+  });
+
   const handleSubmit = () => {
     console.log('Form Submit');
   };
@@ -21,12 +30,23 @@ const FormsExample = ({ users }: Props) => {
   return (
     <FormsExampleContent>
       <h3>Forms Example</h3>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        {({ values }: FormikValues) => (
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validationSchema={validationSchema}
+        isInitialValid={(formik: any) => validationSchema.isValidSync(formik.initialValues)}
+      >
+        {({ values, isValid }: FormikValues) => (
           <Form>
-            <Field name="name" placeholder="First Name" />
-            <Field name="surName" placeholder="Sur Name" />
-            <Field name="age" placeholder="Age" />
+            <Field name="name" label="First Name">
+              <Input />
+            </Field>
+            <Field name="surName" label="Sur Name">
+              <Input />
+            </Field>
+            <Field name="age" label="Age">
+              <Input />
+            </Field>
             <Button color="primary" fill="filled" type="submit" onClick={handleSubmit} text="Submit" />
           </Form>
         )}

@@ -13,14 +13,14 @@ const Tags = ({ tags, onAddTag, onRemoveTag }: Props) => {
 
   const handleAddTag = (event: any) => {
     if (tagText !== '' && event === 'Enter') {
-      onAddTag ? onAddTag([...tags, tagText]) : setTag([...tag, tagText]);
+      onAddTag && tags ? onAddTag([...tags, tagText]) : setTag([...tag, tagText]);
       setTagText('');
       return;
     }
   };
 
   const removeTag = (index: number) => {
-    onRemoveTag
+    onRemoveTag && tags
       ? onRemoveTag(tags.filter((_: any, i: number) => index !== i))
       : setTag(tag.filter((_: any, i: number) => index !== i));
   };
