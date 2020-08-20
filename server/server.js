@@ -6,5 +6,5 @@ const router = jsonServer.router(todoData);
 
 server.use(router);
 server.listen(3001, () => {
-    console.log('JSON Server is running');
+  console.log('JSON Server is running on 3001');
 });
