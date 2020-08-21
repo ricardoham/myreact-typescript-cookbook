@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Routes from './routes';
+import { Router } from 'react-router-dom';
+import history from 'configs/history';
 import StyledGlobal from './globalStyles';
+import App from 'pages/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
+  <Router history={history}>
     <React.StrictMode>
-        <StyledGlobal />
-        <Routes />
-    </React.StrictMode>,
-    document.getElementById('root'),
+      <StyledGlobal />
+      <App />
+    </React.StrictMode>
+  </Router>,
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
