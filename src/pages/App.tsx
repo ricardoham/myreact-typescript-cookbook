@@ -3,15 +3,17 @@ import Switch from 'components/Switch';
 import Routes from 'routes';
 import Navbar from 'components/Navbar';
 
+import { MainContainer } from './styles';
+
 const App = () => {
   const [toggleNight, setToggleNight] = useState(false);
 
   return (
-    <main>
-      <Switch toggle={toggleNight} onClick={() => setToggleNight(!toggleNight)} />
+    <MainContainer>
       <Navbar />
+      <Switch toggle={toggleNight} onClick={() => setToggleNight(!toggleNight)} />
       <Routes />
-    </main>
+    </MainContainer>
   );
 };
 

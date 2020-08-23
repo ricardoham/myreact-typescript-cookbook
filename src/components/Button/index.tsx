@@ -3,8 +3,8 @@ import { StyledButton } from './styles';
 
 export interface ButtonProps {
   type: 'button' | 'submit' | 'reset';
-  fill: 'filled' | 'outline';
-  color: 'primary' | 'secondary' | 'ghost' | 'danger';
+  fill?: 'filled' | 'outline';
+  color?: 'primary' | 'secondary' | 'danger';
   text?: string;
   icon?: string;
   children?: JSX.Element;

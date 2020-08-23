@@ -47,7 +47,7 @@ const FormsExample = ({ users }: Props) => {
             <Field name="age" label="Age">
               <Input />
             </Field>
-            <Button color="primary" fill="filled" type="submit" onClick={handleSubmit} text="Submit" />
+            <Button type="submit" onClick={handleSubmit} text="Submit" />
           </Form>
         )}
       </Formik>
