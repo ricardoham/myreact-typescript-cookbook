@@ -10,6 +10,7 @@ const StyledButton = styled.button<StyledProps>`
   background: none;
   border-radius: 4px;
   padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
   color: #fff;
   ${(props) => {
     switch (props.color) {
