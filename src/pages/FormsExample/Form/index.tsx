@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, FormikValues } from 'formik';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import { UserModel } from 'models/user';
 import { FormsExampleContent, Form, ButtonContainer } from './styles';
@@ -38,9 +38,9 @@ const FormsExample = ({ users }: Props) => {
         initialValues={initialValues}
         onSubmit={handleSubmit}
         validationSchema={validationSchema}
-        isInitialValid={(formik: any) => validationSchema.isValidSync(formik.initialValues)}
+        validateOnMount={true}
       >
-        {({ values, isValid }: FormikValues) => (
+        {() => (
           <Form>
             <Field name="name" label="First Name">
               <Input />

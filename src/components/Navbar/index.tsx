@@ -3,7 +3,7 @@ import { NavBar } from './styles';
 
 const Navbar = () => (
   <NavBar>
-    <NavBar.NavLink exact to="/">
+    <NavBar.NavLink exact="true" to="/">
       Home
     </NavBar.NavLink>
     <NavBar.NavLink to="/hooks">Hooks</NavBar.NavLink>

@@ -36,15 +36,15 @@ const Accordion = ({ children, items, title, content }: Props) => {
       {items && items.length > 0 ? (
         renderSections()
       ) : (
-          <>
-            <AccordionHeader title={title || ''} onShowSection={handleAccordionSection} isRotate={collapase} />
-            {children ? (
-              <AccordionSection showSection={collapase}>{children}</AccordionSection>
-            ) : (
-                <AccordionSection content={content} showSection={collapase} />
-              )}
-          </>
-        )}
+        <>
+          <AccordionHeader title={title || ''} onShowSection={handleAccordionSection} isRotate={collapase} />
+          {children ? (
+            <AccordionSection showSection={collapase}>{children}</AccordionSection>
+          ) : (
+            <AccordionSection content={content} showSection={collapase} />
+          )}
+        </>
+      )}
     </AccordionContainer>
   );
 };

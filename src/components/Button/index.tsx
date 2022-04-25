@@ -11,7 +11,7 @@ export interface ButtonProps {
   onClick: () => void;
 }
 
-const Button = ({ type, fill, color, text, icon, children, onClick }: ButtonProps) => {
+const Button = ({ type, fill, color, text, children, onClick }: ButtonProps) => {
   return (
     <StyledButton type={!type ? 'button' : type} fill={fill} color={color} onClick={onClick}>
       {text || children}

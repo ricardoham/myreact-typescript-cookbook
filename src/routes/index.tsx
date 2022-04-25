@@ -5,7 +5,7 @@ import HooksPage from 'pages/HooksPage';
 import PortalsPage from 'pages/PortalsPage';
 import FormsExample from 'pages/FormsExample/Form';
 
-const Routes = () => (
+const Routes = (): JSX.Element => (
   <Switch>
     <Route path="/" element={<Home />} />
     <Route path="/hooks" element={<HooksPage />} />
