@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import history from 'configs/history';
 import StyledGlobal from './globalStyles';
 import App from 'pages/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Router history={history}>
+  <BrowserRouter>
     <React.StrictMode>
       <StyledGlobal />
       <App />
     </React.StrictMode>
-  </Router>,
+  </BrowserRouter>,
   document.getElementById('root'),
 );
 
