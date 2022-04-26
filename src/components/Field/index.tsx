@@ -10,7 +10,7 @@ interface Props {
   children: JSX.Element;
 }
 
-const CustomFormikField = ({ id, name, label, children, ...props }: Props) => {
+const CustomFormikField = ({ id, name, label, children, ...props }: Props): JSX.Element => {
   const [field, meta] = useField({ ...props, name });
 
   return (

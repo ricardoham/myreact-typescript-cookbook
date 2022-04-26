@@ -1,15 +1,15 @@
 import React from 'react';
-import { NavBar } from './styles';
+import * as S from './styles';
 
-const Navbar = () => (
-  <NavBar>
-    <NavBar.NavLink exact="true" to="/">
+const Navbar = (): JSX.Element => (
+  <S.NavBar>
+    <S.NavBarNavLink end to="/">
       Home
-    </NavBar.NavLink>
-    <NavBar.NavLink to="/hooks">Hooks</NavBar.NavLink>
-    <NavBar.NavLink to="/portals">React Portals</NavBar.NavLink>
-    <NavBar.NavLink to="/forms">Forms Example</NavBar.NavLink>
-  </NavBar>
+    </S.NavBarNavLink>
+    <S.NavBarNavLink to="/hooks">Hooks</S.NavBarNavLink>
+    <S.NavBarNavLink to="/portals">React Portals</S.NavBarNavLink>
+    <S.NavBarNavLink to="/forms">Forms Example</S.NavBarNavLink>
+  </S.NavBar>
 );
 
 export default Navbar;

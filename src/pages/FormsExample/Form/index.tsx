@@ -10,7 +10,7 @@ interface Props {
   users?: UserModel;
 }
 
-const FormsExample = ({ users }: Props) => {
+const FormsExample = ({ users }: Props): JSX.Element => {
   const initialValues = {
     name: users?.name || '',
     surName: users?.surName || '',
@@ -23,11 +23,11 @@ const FormsExample = ({ users }: Props) => {
     age: yup.number().required('Age is required'),
   });
 
-  const handleSubmit = () => {
+  const handleSubmit = (): void => {
     console.log('Form Submit');
   };
 
-  const handleClearForm = () => {
+  const handleClearForm = (): void => {
     console.log('Clear form');
   };
 
@@ -40,7 +40,7 @@ const FormsExample = ({ users }: Props) => {
         validationSchema={validationSchema}
         validateOnMount={true}
       >
-        {() => (
+        {(): JSX.Element => (
           <Form>
             <Field name="name" label="First Name">
               <Input />

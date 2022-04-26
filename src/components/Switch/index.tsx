@@ -6,7 +6,7 @@ interface Props {
   onClick: () => void;
 }
 
-const Switch = ({ toggle, onClick }: Props) => {
+const Switch = ({ toggle, onClick }: Props): JSX.Element => {
   return (
     <SwitchContainer onClick={onClick}>
       <SwitchPoint toggle={toggle} />

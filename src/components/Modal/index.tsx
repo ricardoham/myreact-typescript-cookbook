@@ -7,7 +7,7 @@ interface Props {
   onCloseModal: () => void;
 }
 
-const Modal = ({ showModal, onCloseModal }: Props) => {
+const Modal = ({ showModal, onCloseModal }: Props): React.ReactPortal => {
   return createPortal(
     showModal && (
       <ModalOverlay onClick={onCloseModal}>

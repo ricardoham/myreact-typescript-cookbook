@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { turtles } from './turtles';
-import { Section, Turtle } from './styles';
+import * as S from './styles';
 
-const StateHookNinjaTurtles = () => {
+const StateHookNinjaTurtles = (): JSX.Element => {
   const [selectTurtles, setSelectTurtles] = useState<string[]>([]);
 
-  const isChecked = (turtle: string) => !!selectTurtles.find((tur) => tur === turtle);
+  const isChecked = (turtle: string): boolean => !!selectTurtles.find((tur) => tur === turtle);
 
-  const handleSelectTurtle = (turtle: string) => {
+  const handleSelectTurtle = (turtle: string): void => {
     const turtleInArray = selectTurtles.find((tur) => tur === turtle);
 
     if (turtleInArray) {
@@ -22,18 +22,18 @@ const StateHookNinjaTurtles = () => {
       <header>
         <h4>Click in the Ninja Turtles</h4>
       </header>
-      <Section>
+      <S.Section>
         {turtles.map((turtle, index) => (
-          <Turtle key={index}>
-            <Turtle.Img
+          <S.Turtle key={index}>
+            <S.Img
               key={index}
               src={`/images/ninja_turtles/${isChecked(turtle.name) ? turtle.image : `${turtle.image}_outline`}.svg`}
-              onClick={() => handleSelectTurtle(turtle.name)}
+              onClick={(): void => handleSelectTurtle(turtle.name)}
             />
-            <Turtle.Name>{turtle.name}</Turtle.Name>
-          </Turtle>
+            <S.Name>{turtle.name}</S.Name>
+          </S.Turtle>
         ))}
-      </Section>
+      </S.Section>
     </>
   );
 };

@@ -8,7 +8,7 @@ interface Props {
   hasError?: boolean;
 }
 
-const Label = ({ id, name, label, hasError }: Props) => (
+const Label = ({ id, name, label, hasError }: Props): JSX.Element => (
   <StyledLabel htmlFor={id?.toString() || name} hasError={hasError}>
     {label}
   </StyledLabel>

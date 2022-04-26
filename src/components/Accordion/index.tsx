@@ -16,19 +16,19 @@ interface AccordionItems {
   content: string;
 }
 
-const Accordion = ({ children, items, title, content }: Props) => {
-  const [collapase, setCollapse] = useState(false);
+const Accordion = ({ children, items, title, content }: Props): JSX.Element => {
+  const [collapse, setCollapse] = useState(false);
 
-  const renderSections = () =>
+  const renderSections = (): JSX.Element[] | undefined =>
     items?.map((section: AccordionItems) => (
       <>
-        <AccordionHeader isRotate={collapase} title={section.title} onShowSection={handleAccordionSection} />
-        <AccordionSection content={section.content} showSection={collapase} />
+        <AccordionHeader isRotate={collapse} title={section.title} onShowSection={handleAccordionSection} />
+        <AccordionSection content={section.content} showSection={collapse} />
       </>
     ));
 
-  const handleAccordionSection = () => {
-    setCollapse(!collapase);
+  const handleAccordionSection = (): void => {
+    setCollapse(!collapse);
   };
 
   return (
@@ -37,11 +37,11 @@ const Accordion = ({ children, items, title, content }: Props) => {
         renderSections()
       ) : (
         <>
-          <AccordionHeader title={title || ''} onShowSection={handleAccordionSection} isRotate={collapase} />
+          <AccordionHeader title={title || ''} onShowSection={handleAccordionSection} isRotate={collapse} />
           {children ? (
-            <AccordionSection showSection={collapase}>{children}</AccordionSection>
+            <AccordionSection showSection={collapse}>{children}</AccordionSection>
           ) : (
-            <AccordionSection content={content} showSection={collapase} />
+            <AccordionSection content={content} showSection={collapse} />
           )}
         </>
       )}

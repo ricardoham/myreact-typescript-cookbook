@@ -2,7 +2,7 @@ import React from 'react';
 import Accordion from '../../components/Accordion';
 import StateHookNinjaTurtles from '../HooksPage/StateHook';
 
-const HooksPage = () => {
+const HooksPage = (): JSX.Element => {
   return (
     <section>
       <article>

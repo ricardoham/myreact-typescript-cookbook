@@ -5,13 +5,13 @@ import Navbar from 'components/Navbar';
 
 import { MainContainer } from './styles';
 
-const App = () => {
+const App = (): JSX.Element => {
   const [toggleNight, setToggleNight] = useState(false);
 
   return (
     <MainContainer>
       <Navbar />
-      <Switch toggle={toggleNight} onClick={() => setToggleNight(!toggleNight)} />
+      <Switch toggle={toggleNight} onClick={(): void => setToggleNight(!toggleNight)} />
       <Routes />
     </MainContainer>
   );

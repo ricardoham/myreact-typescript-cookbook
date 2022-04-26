@@ -6,7 +6,7 @@ interface Props {
   showSection: boolean;
 }
 
-const AccordionSection = ({ children, content, showSection }: Props) => (
+const AccordionSection = ({ children, content, showSection }: Props): JSX.Element => (
   <StyledSection showSection={showSection}>{content ? content : children}</StyledSection>
 );
 

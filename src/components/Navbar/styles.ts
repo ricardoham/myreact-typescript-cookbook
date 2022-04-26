@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-const NavBar: any = styled.nav`
+const NavBar = styled.nav`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -10,7 +10,7 @@ const NavBar: any = styled.nav`
   margin: 8px 12px 16px 12px;
 `;
 
-NavBar.NavLink = styled(NavLink)`
+export const NavBarNavLink = styled(NavLink)`
   margin: 8px;
   font-size: 1em;
   font-family: 'Roboto', sans-serif;

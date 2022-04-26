@@ -5,5 +5,5 @@ interface Props {
 }
 
 export const StyledSection = styled.div<Props>`
-  display: ${(props) => (props.showSection ? 'block' : 'none')};
+  display: ${(props): string => (props.showSection ? 'block' : 'none')};
 `;

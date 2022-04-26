@@ -22,7 +22,7 @@ export const SwitchPoint = styled.div<StyledProps>`
   transition: 0.2s;
   border: 1px solid grey;
 
-  ${(props) => {
+  ${(props): string | undefined => {
     if (props.toggle) {
       return `
         margin-left: 22px;

@@ -2,7 +2,7 @@ import React from 'react';
 import FormsExample from './Form';
 import UsersListContainer from 'containers/UsersList';
 
-const FormsPage = () => {
+const FormsPage = (): JSX.Element => {
   return (
     <section>
       <UsersListContainer />
