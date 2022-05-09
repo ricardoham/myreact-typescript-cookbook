@@ -9,7 +9,7 @@ export const SwitchContainer = styled.div`
   align-items: center;
   width: 2.5rem;
   height: 1.2rem;
-  border: 1px solid grey;
+  border: 2px solid #9c88ff;
   border-radius: 5px;
   cursor: pointer;
 `;

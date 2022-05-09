@@ -3,17 +3,23 @@ import Switch from 'components/Switch';
 import Routes from 'routes';
 import Navbar from 'components/Navbar';
 
-import { MainContainer } from './styles';
+import * as S from './styles';
 
 const App = (): JSX.Element => {
   const [toggleNight, setToggleNight] = useState(false);
 
   return (
-    <MainContainer>
-      <Navbar />
-      <Switch toggle={toggleNight} onClick={(): void => setToggleNight(!toggleNight)} />
+    <S.MainContainer>
+      <S.Header>
+        <Navbar />
+        <Switch
+          styles={{ marginLeft: "auto" }}
+          toggle={toggleNight}
+          onClick={(): void => setToggleNight(!toggleNight)}
+        />
+      </S.Header>
       <Routes />
-    </MainContainer>
+    </S.MainContainer>
   );
 };
 

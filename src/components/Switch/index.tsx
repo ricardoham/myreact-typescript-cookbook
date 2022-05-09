@@ -1,16 +1,17 @@
 import React from 'react';
-import { SwitchContainer, SwitchPoint } from './styles';
+import * as S from './styles';
 
-interface Props {
+interface Props<T> {
+  styles?: T;
   toggle: boolean;
   onClick: () => void;
 }
 
-const Switch = ({ toggle, onClick }: Props): JSX.Element => {
+const Switch = <T,>({ toggle, onClick, styles }: Props<T>): JSX.Element => {
   return (
-    <SwitchContainer onClick={onClick}>
-      <SwitchPoint toggle={toggle} />
-    </SwitchContainer>
+    <S.SwitchContainer onClick={onClick} style={styles}>
+      <S.SwitchPoint toggle={toggle} />
+    </S.SwitchContainer>
   );
 };
 

@@ -14,10 +14,10 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier', 'jest'],
   extends: [
-    'prettier',
+    // 'prettier',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
+    // 'plugin:prettier/recommended',
   ],
   rules: {
     'no-console': 'warn',
@@ -25,6 +25,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
     '@typescript-eslint/explicit-function-return-type': 'warn',
     'no-empty': 'warn',
-    'prettier/prettier': 'error',
+    // 'prettier/prettier': 'error',
   },
 };
