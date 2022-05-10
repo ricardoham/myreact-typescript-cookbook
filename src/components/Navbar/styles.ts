@@ -17,7 +17,11 @@ export const NavBarNavLink = styled(NavLink)`
   cursor: pointer;
   text-decoration: none;
   text-indent: 0.3em;
-  color: #9c88ff;
+  color: #181818;
+  &.active {
+    color: #9c88ff;
+    font-weight: 600;
+  }
   border-bottom: 3px solid transparent;
 `;
 

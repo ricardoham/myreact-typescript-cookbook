@@ -6,18 +6,18 @@ export const RemoveIcon = styled(IoIosClose)`
   font-size: 1.4rem;
 `;
 
-export const StyledTag: any = styled.div`
+export const StyledTag = styled.div`
   padding: 10px;
 `;
 
-StyledTag.Input = styled.input`
+export const StyledTagInput = styled.input`
   height: 30px;
   width: 200px;
 `;
 
-StyledTag.Header = styled.h3``;
+export const StyledTagHeader = styled.h3``;
 
-StyledTag.Item = styled.li`
+export const StyledTagItem = styled.li`
   display: flex;
   background-color: #ff7979;
   padding: 5px;
@@ -27,7 +27,7 @@ StyledTag.Item = styled.li`
   margin: 5px 0;
 `;
 
-StyledTag.ItemText = styled.span`
+export const StyledTagItemText = styled.span`
   flex: 1;
   white-space: nowrap;
   overflow: hidden;

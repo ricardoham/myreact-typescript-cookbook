@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { RemoveIcon, StyledTag } from './styles';
+import React, { ChangeEvent, useState } from 'react';
+import * as S from './styles';
 
 interface Props {
   tags?: string[];
-  onAddTag?: (tags: any) => void;
-  onRemoveTag?: (tags: any) => void;
+  onAddTag?: (tags: [...string[], string]) => void;
+  onRemoveTag?: (tags: string[]) => void;
 }
 
-const Tags = ({ tags, onAddTag, onRemoveTag }: Props) => {
+const Tags = ({ tags, onAddTag, onRemoveTag }: Props): JSX.Element => {
   const [tagText, setTagText] = useState('');
   const [tag, setTag] = useState<string[]>(tags || []);
 
-  const handleAddTag = (event: any) => {
+  const handleAddTag = (event: string): void => {
     if (tagText !== '' && event === 'Enter') {
       onAddTag && tags ? onAddTag([...tags, tagText]) : setTag([...tag, tagText]);
       setTagText('');
@@ -19,31 +19,31 @@ const Tags = ({ tags, onAddTag, onRemoveTag }: Props) => {
     }
   };
 
-  const removeTag = (index: number) => {
+  const removeTag = (index: number): void => {
     onRemoveTag && tags
-      ? onRemoveTag(tags.filter((_: any, i: number) => index !== i))
-      : setTag(tag.filter((_: any, i: number) => index !== i));
+      ? onRemoveTag(tags.filter((_, i: number) => index !== i))
+      : setTag(tag.filter((_, i: number) => index !== i));
   };
 
   return (
-    <StyledTag>
-      <StyledTag.Header>Tags</StyledTag.Header>
+    <S.StyledTag>
+      <S.StyledTagHeader>Tags</S.StyledTagHeader>
       <ul>
         {tags &&
           tags.map((t: string, index: number) => (
-            <StyledTag.Item key={index}>
-              <StyledTag.ItemText>{t}</StyledTag.ItemText>
-              <RemoveIcon onClick={() => removeTag(index)} />
-            </StyledTag.Item>
+            <S.StyledTagItem key={index}>
+              <S.StyledTagItemText>{t}</S.StyledTagItemText>
+              <S.RemoveIcon onClick={(): void => removeTag(index)} />
+            </S.StyledTagItem>
           ))}
       </ul>
-      <StyledTag.Input
+      <S.StyledTagInput
         value={tagText}
-        onKeyUp={(e: any) => handleAddTag(e.key)}
-        onChange={(e: any) => setTagText(e.target.value)}
+        onKeyUp={(e: { key: string }): void => handleAddTag(e.key)}
+        onChange={(e: ChangeEvent<{ value: string }>): void => setTagText(e.target.value)}
         placeholder="Type to insert a Tag"
       />
-    </StyledTag>
+    </S.StyledTag>
   );
 };
 

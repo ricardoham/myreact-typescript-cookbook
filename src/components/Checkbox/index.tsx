@@ -1,21 +1,21 @@
 import React from 'react';
-import { CheckBox } from './styles';
+import * as S from './styles';
 
 interface Props {
   checked: boolean;
 }
 
-const Checkbox = ({ checked }: Props) => {
+const Checkbox = ({ checked }: Props): JSX.Element => {
   return (
-    <CheckBox>
-      <CheckBox.Box>
+    <S.CheckBox>
+      <S.CheckBoxBox>
         {checked && (
-          <CheckBox.CheckMark viewBox="0 0 24 24">
+          <S.CheckBoxCheckMark viewBox="0 0 24 24">
             <polyline points="20 6 9 17 4 12" />
-          </CheckBox.CheckMark>
+          </S.CheckBoxCheckMark>
         )}
-      </CheckBox.Box>
-    </CheckBox>
+      </S.CheckBoxBox>
+    </S.CheckBox>
   );
 };
 
