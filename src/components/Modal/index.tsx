@@ -4,15 +4,17 @@ import { ModalContainer, ModalOverlay } from './styles';
 
 interface Props {
   showModal: boolean;
+  children: JSX.Element | JSX.Element[];
+  noCloseOff?: boolean;
   onCloseModal: () => void;
 }
 
-const Modal = ({ showModal, onCloseModal }: Props): React.ReactPortal => {
+const Modal = ({ showModal, onCloseModal, children, noCloseOff }: Props): React.ReactPortal => {
   return createPortal(
     showModal && (
-      <ModalOverlay onClick={onCloseModal}>
+      <ModalOverlay onClick={!noCloseOff ? onCloseModal : undefined}>
         <ModalContainer>
-          <span>Test</span>
+          {children}
         </ModalContainer>
       </ModalOverlay>
     ),

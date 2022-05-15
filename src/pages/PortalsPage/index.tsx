@@ -1,3 +1,7 @@
+import Button from 'components/Button';
+import ModalBody from 'components/Modal/ModalBody';
+import ModalFooter from 'components/Modal/ModalFooter';
+import ModalHeader from 'components/Modal/ModalHeader';
 import React, { useState } from 'react';
 import Modal from '../../components/Modal';
 
@@ -9,10 +13,14 @@ const PortalsPage = (): JSX.Element => {
       <article>
         <header>Here a Example of React Portals:</header>
         <h4>Modal</h4>
-        <Modal showModal={showModal} onCloseModal={(): void => setShowModal(false)} />
-        <button type="button" onClick={(): void => setShowModal(true)}>
-          Show Modal
-        </button>
+        <Modal showModal={showModal} onCloseModal={(): void => setShowModal(false)}>
+          <ModalHeader headerTitle='test' />
+          <ModalBody>
+            <span>test</span>
+          </ModalBody>
+          <ModalFooter />
+        </Modal>
+        <Button onClick={(): void => setShowModal(true)} text="Click Here!" />
       </article>
     </section>
   );
