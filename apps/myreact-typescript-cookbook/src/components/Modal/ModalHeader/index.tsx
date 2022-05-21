@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaTimes } from 'react-icons/fa'
+import IconButton from 'components/IconButton';
 import * as S from './styles';
 
 interface Props {
@@ -10,7 +12,7 @@ const ModalHeader = ({ headerTitle, onCloseModal }: Props): JSX.Element => {
   return (
     <S.ModalHeaderContainer>
       <S.ModalHeaderTitle>{headerTitle}</S.ModalHeaderTitle>
-      <S.ModalHeaderButton onClick={onCloseModal}>X</S.ModalHeaderButton>
+      <IconButton icon={<FaTimes />} onClick={() => {}}/>
     </S.ModalHeaderContainer>
   )
 }
