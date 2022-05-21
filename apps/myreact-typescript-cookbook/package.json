@@ -1,0 +1,60 @@
+{
+  "name": "myreact-typescript-cookbook",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^14.1.1",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.27",
+    "@types/react": "^18.0.6",
+    "@types/react-dom": "^18.0.2",
+    "@types/styled-components": "^5.1.25",
+    "@types/yup": "^0.29.13",
+    "formik": "^2.2.9",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
+    "typescript": "~4.6.3",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "craco start",
+    "server": "nodemon mock-server/server.js",
+    "build": "BUILD_PATH=../../dist/apps/myreact-typescript-cookbook craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "serve": "npm start"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "faker": "^6.6.6",
+    "json-server": "^0.17.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.2"
+  }
+}
