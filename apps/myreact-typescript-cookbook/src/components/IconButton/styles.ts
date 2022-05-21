@@ -11,6 +11,7 @@ export const IconButtonContainer = styled.div<StyledProps>`
   padding: 5px;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
   ${(props): string => {
     switch (props.color) {
       case 'secondary':

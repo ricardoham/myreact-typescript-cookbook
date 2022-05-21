@@ -14,7 +14,7 @@ const PortalsPage = (): JSX.Element => {
         <header>Here a Example of React Portals:</header>
         <h4>Modal</h4>
         <Modal showModal={showModal} onCloseModal={(): void => setShowModal(false)}>
-          <ModalHeader headerTitle='test' />
+          <ModalHeader headerTitle='test' onCloseModal={(): void => setShowModal(false)}/>
           <ModalBody>
             <span>test</span>
           </ModalBody>

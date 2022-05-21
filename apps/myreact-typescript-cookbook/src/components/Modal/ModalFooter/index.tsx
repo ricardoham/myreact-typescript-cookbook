@@ -1,9 +1,13 @@
 import React from "react";
 import * as S from './styles';
 
-const ModalFooter = (): JSX.Element => {
+export interface Props {
+  children?: JSX.Element | JSX.Element[];
+}
+
+const ModalFooter = ({ children }: Props): JSX.Element => {
   return (
-    <S.ModalFooterContainer>footer</S.ModalFooterContainer>
+    <S.ModalFooterContainer>{children}</S.ModalFooterContainer>
   )
 }
 

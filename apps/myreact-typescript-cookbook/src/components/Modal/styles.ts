@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
-  min-width: 800px;
+  display: flex;
+  padding: 1rem;
+  margin-top: -150px;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ModalContent = styled.div`
+  width: 100%;
   border-radius: 4px;
   padding: 1rem;
   background-color: #fff;
+  z-index: 2;
 `;
 
 export const ModalOverlay = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   width: 100%;
   height: 100%;

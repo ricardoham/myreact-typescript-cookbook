@@ -6,5 +6,6 @@ export const ModalHeaderContainer = styled.div`
 
 export const ModalHeaderTitle = styled.h2`
   margin: 0px;
+  flex: 1;
 `;
 

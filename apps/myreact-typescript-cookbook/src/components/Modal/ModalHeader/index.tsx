@@ -12,7 +12,7 @@ const ModalHeader = ({ headerTitle, onCloseModal }: Props): JSX.Element => {
   return (
     <S.ModalHeaderContainer>
       <S.ModalHeaderTitle>{headerTitle}</S.ModalHeaderTitle>
-      <IconButton icon={<FaTimes />} onClick={() => {}}/>
+      <IconButton icon={<FaTimes />} onClick={onCloseModal || undefined}/>
     </S.ModalHeaderContainer>
   )
 }

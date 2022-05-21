@@ -5,7 +5,7 @@ export interface IconButtonProps {
   color?: 'primary' | 'secondary' | 'danger';
   fill?: 'filled' | 'outline';
   icon: JSX.Element | string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const IconButton = ({ color, fill, icon, onClick }: IconButtonProps): JSX.Element => {
