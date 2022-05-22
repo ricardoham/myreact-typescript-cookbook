@@ -2,6 +2,8 @@
 
 A monorepo with my react "cookbook formula"
 
+## Working in progress ⚠️
+
 ### Obs to Skip CRA preflight check since Nx manages the monorepo and need nx globally installed
 
 `echo "SKIP_PREFLIGHT_CHECK=true" > .env`
