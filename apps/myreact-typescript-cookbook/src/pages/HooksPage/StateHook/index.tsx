@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { turtles } from './turtles';
 import * as S from './styles';
+import StateHookTyping from './StateHookTyping';
 
 const StateHookNinjaTurtles = (): JSX.Element => {
   const [selectTurtles, setSelectTurtles] = useState<string[]>([]);
 
-  const isChecked = (turtle: string): boolean => !!selectTurtles.find((tur) => tur === turtle);
+  const isChecked = (turtle: string): boolean =>
+    !!selectTurtles.find((tur) => tur === turtle);
 
   const handleSelectTurtle = (turtle: string): void => {
     const turtleInArray = selectTurtles.find((tur) => tur === turtle);
@@ -19,15 +21,25 @@ const StateHookNinjaTurtles = (): JSX.Element => {
 
   return (
     <>
+      <StateHookTyping />
       <header>
-        <h4>Click in the Ninja Turtles</h4>
+        <h4>Practice example using React Hooks</h4>
+        <p>Select a Ninja Turtle to set a color over they</p>
+        <p>
+          Here a <code>useState</code> hook will hold the state color of each
+          turtle
+        </p>
       </header>
       <S.Section>
         {turtles.map((turtle, index) => (
           <S.Turtle key={index}>
             <S.Img
               key={index}
-              src={`/images/ninja_turtles/${isChecked(turtle.name) ? turtle.image : `${turtle.image}_outline`}.svg`}
+              src={`/images/ninja_turtles/${
+                isChecked(turtle.name)
+                  ? turtle.image
+                  : `${turtle.image}_outline`
+              }.svg`}
               onClick={(): void => handleSelectTurtle(turtle.name)}
             />
             <S.Name>{turtle.name}</S.Name>

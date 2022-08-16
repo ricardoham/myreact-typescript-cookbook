@@ -11,6 +11,9 @@ export const Image = styled.img`
   border-radius: 8px;
   max-width: 520px;
   box-shadow: 8px 6px 4px 0px #888888;
+  @media only screen and (max-width: 600px) {
+    max-width: 300px;
+  }
 `;
 
 export const ImageControlContainer = styled.div`

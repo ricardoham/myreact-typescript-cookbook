@@ -13,6 +13,14 @@ const StyledGlobal = createGlobalStyle`
     background-color: #9c88ff;
     margin: 24px;
   }
+
+  code {
+    background-color: #f1f2f6;
+    border-radius: 4px;
+    padding: 4px;
+    color: #ff7675;
+    font-weight: bold;
+  }
 `;
 
 export default StyledGlobal;
