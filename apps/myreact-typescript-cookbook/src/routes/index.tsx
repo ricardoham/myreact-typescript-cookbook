@@ -4,6 +4,7 @@ import Home from 'pages/Home';
 import HooksPage from 'pages/HooksPage';
 import PortalsPage from 'pages/PortalsPage';
 import FormsExample from 'pages/FormsExample/Form';
+import ReduxPage from 'pages/ReduxPage';
 
 const Routes = (): JSX.Element => (
   <Switch>
@@ -11,6 +12,7 @@ const Routes = (): JSX.Element => (
     <Route path="/hooks" element={<HooksPage />} />
     <Route path="/portals" element={<PortalsPage />} />
     <Route path="/forms" element={<FormsExample />} />
+    <Route path="/redux" element={<ReduxPage />} />
   </Switch>
 );
 

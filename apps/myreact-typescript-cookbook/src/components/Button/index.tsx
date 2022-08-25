@@ -8,12 +8,24 @@ export interface ButtonProps {
   text?: string;
   icon?: string;
   children?: JSX.Element;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
-const Button = ({ type, fill, color, text, children, onClick }: ButtonProps): JSX.Element => {
+const Button = ({
+  type,
+  fill,
+  color,
+  text,
+  children,
+  onClick,
+}: ButtonProps): JSX.Element => {
   return (
-    <StyledButton type={!type ? 'button' : type} fill={fill} color={color} onClick={onClick}>
+    <StyledButton
+      type={!type ? 'button' : type}
+      fill={fill}
+      color={color}
+      onClick={onClick}
+    >
       {text || children}
     </StyledButton>
   );

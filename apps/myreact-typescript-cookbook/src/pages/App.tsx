@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Switch from 'components/Switch';
 import Routes from 'routes';
-import Navbar from 'components/Navbar';
+import Navbar from 'routes/Navbar';
 
 import * as S from './styles';
 
@@ -13,7 +13,7 @@ const App = (): JSX.Element => {
       <S.Header>
         <Navbar />
         <Switch
-          styles={{ marginLeft: "auto" }}
+          styles={{ marginLeft: 'auto' }}
           toggle={toggleNight}
           onClick={(): void => setToggleNight(!toggleNight)}
         />
