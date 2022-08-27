@@ -12,6 +12,7 @@ const StyledButton = styled.button<StyledProps>`
   padding: 0.5rem 1rem;
   margin: 0 0.5rem;
   color: #fff;
+  cursor: pointer;
   ${(props): string => {
     switch (props.color) {
       case 'secondary':
