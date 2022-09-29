@@ -4,7 +4,7 @@ import { useAppDispatch } from 'hooks/redux-hooks/useRedux';
 import { transitionStart } from '../../slices/transitionPageSlice';
 import { TRANSITION_PAGE_ID } from 'constants/transition-page';
 
-const ReduxPage = () => {
+const StateManagementPage = () => {
   const dispatch = useAppDispatch();
 
   return (
@@ -20,4 +20,4 @@ const ReduxPage = () => {
   );
 };
 
-export default ReduxPage;
+export default StateManagementPage;

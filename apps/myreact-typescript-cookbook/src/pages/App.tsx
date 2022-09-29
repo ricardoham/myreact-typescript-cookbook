@@ -4,12 +4,14 @@ import Routes from 'routes';
 import Navbar from 'routes/Navbar';
 
 import * as S from './styles';
+import TransitionPage from 'components/TransitionPage';
 
 const App = (): JSX.Element => {
   const [toggleNight, setToggleNight] = useState(false);
 
   return (
     <S.MainContainer>
+      <TransitionPage />
       <S.Header>
         <Navbar />
         <Switch
