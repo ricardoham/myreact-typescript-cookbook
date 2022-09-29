@@ -4,11 +4,11 @@ import ImageSlider from 'components/ImageSlider';
 import ModalBody from 'components/Modal/ModalBody';
 import ModalFooter from 'components/Modal/ModalFooter';
 import ModalHeader from 'components/Modal/ModalHeader';
-import Modal from '../../components/Modal';
+import Modal from 'components/Modal';
 import * as S from './styles';
 import CodeBlock from 'components/CodeBlock';
 
-const PortalsPage = (): JSX.Element => {
+const Portals = (): JSX.Element => {
   const [showModal, setShowModal] = useState(false);
   const imgs = [
     '/images/snippets/dom-no-portals.png',
@@ -32,7 +32,7 @@ const PortalsPage = (): JSX.Element => {
   return (
     <section>
       <article>
-        <h4>React Portals</h4>
+        <h2>React Portals</h2>
         <p>
           Portals provide first-class way to render children into a DOM node
           that exists outside the DOM hierarchy of the parent component.
@@ -64,4 +64,4 @@ const PortalsPage = (): JSX.Element => {
   );
 };
 
-export default PortalsPage;
+export default Portals;

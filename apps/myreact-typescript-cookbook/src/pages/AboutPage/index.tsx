@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 
-const Home = (): JSX.Element => {
+const About = (): JSX.Element => {
   return (
     <S.HomeContainer>
       <S.HomeSection>
@@ -16,4 +16,4 @@ const Home = (): JSX.Element => {
   );
 };
 
-export default Home;
+export default About;
