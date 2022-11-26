@@ -2,5 +2,6 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/myreact-typescript-cookbook/src",
   "projectType": "application",
-  "tags": []
+  "tags": [],
+  "name": "myreact-typescript-cookbook"
 }
