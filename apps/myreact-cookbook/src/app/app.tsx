@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Button from '../components/Button';
 import NxWelcome from './nx-welcome';
 
 const StyledApp = styled.div`
@@ -7,11 +6,7 @@ const StyledApp = styled.div`
 `;
 
 export function App() {
-  return (
-    <StyledApp>
-      <Button text="click" onClick={() => console.log('test')} />
-    </StyledApp>
-  );
+  return <StyledApp></StyledApp>;
 }
 
 export default App;
