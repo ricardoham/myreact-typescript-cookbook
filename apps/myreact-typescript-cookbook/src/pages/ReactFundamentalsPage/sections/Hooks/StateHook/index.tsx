@@ -35,7 +35,7 @@ const StateHookNinjaTurtles = (): JSX.Element => {
           <S.Turtle key={index}>
             <S.Img
               key={index}
-              src={`/images/ninja_turtles/${
+              src={`/assets/images/ninja_turtles/${
                 isChecked(turtle.name)
                   ? turtle.image
                   : `${turtle.image}_outline`

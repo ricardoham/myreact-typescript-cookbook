@@ -1,4 +1,4 @@
-import Accordion from 'libs/myreact-cookbook-ui/src/lib/Accordion';
+import { Accordion } from '@myreact-cookbook/myreact-cookbook-ui';
 import StateHookNinjaTurtles from './StateHook';
 
 const Hooks: React.FC = () => {

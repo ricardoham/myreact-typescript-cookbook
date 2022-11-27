@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import Switch from 'libs/myreact-cookbook-ui/src/lib/Switch';
-import TransitionPage from 'libs/myreact-cookbook-ui/src/lib/TransitionPage';
+import { Switch, TransitionPage } from '@myreact-cookbook/myreact-cookbook-ui';
 import Routes from '../routes';
 import Navbar from '../routes/Navbar';
 import * as S from './styles';

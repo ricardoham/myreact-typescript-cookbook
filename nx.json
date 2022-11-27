@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "temp-workspace",
+  "npmScope": "myreact-cookbook",
   "affected": {
     "defaultBase": "main"
   },
@@ -30,7 +30,7 @@
       }
     }
   },
-  "defaultProject": "myreact-typescript-cookbook",
+  "defaultProject": "myreact-cookbook-shell",
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"]

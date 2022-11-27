@@ -11,7 +11,7 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button = ({
+export const Button = ({
   type,
   fill,
   color,
@@ -30,5 +30,3 @@ const Button = ({
     </StyledButton>
   );
 };
-
-export default Button;

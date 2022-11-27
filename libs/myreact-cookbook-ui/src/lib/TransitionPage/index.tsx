@@ -1,7 +1,7 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import * as S from './styles';
 
-const TransitionPage = () => {
+export const TransitionPage = (): JSX.Element => {
   const [transitionEnd, setTransitionEnd] = useState(false);
   const transitionContainer = useRef<HTMLDivElement>(null);
 

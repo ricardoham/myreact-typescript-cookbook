@@ -7,8 +7,18 @@ interface Props {
   type?: string;
 }
 
-const Input = ({ value, type, placeholder, ...props }: Props): JSX.Element => {
-  return <StyledInput value={value} type={type} placeholder={placeholder} {...props} />;
+export const Input = ({
+  value,
+  type,
+  placeholder,
+  ...props
+}: Props): JSX.Element => {
+  return (
+    <StyledInput
+      value={value}
+      type={type}
+      placeholder={placeholder}
+      {...props}
+    />
+  );
 };
-
-export default Input;

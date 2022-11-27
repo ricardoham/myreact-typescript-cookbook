@@ -9,7 +9,12 @@ interface Props {
   onCloseModal?: () => void;
 }
 
-const Modal = ({ showModal, onCloseModal, children, noCloseOff }: Props): React.ReactPortal => {
+export const Modal = ({
+  showModal,
+  onCloseModal,
+  children,
+  noCloseOff,
+}: Props): React.ReactPortal => {
   return createPortal(
     showModal && (
       <S.ModalContainer>
@@ -20,5 +25,3 @@ const Modal = ({ showModal, onCloseModal, children, noCloseOff }: Props): React.
     document.body
   );
 };
-
-export default Modal;

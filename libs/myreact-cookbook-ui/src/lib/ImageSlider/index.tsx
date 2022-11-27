@@ -1,14 +1,14 @@
 // import IconButton from 'components/IconButton';
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import IconButton from '../IconButton';
+import { IconButton } from '../IconButton';
 import * as S from './styles';
 
 export interface Props {
   images: string[];
 }
 
-const ImageSlider = ({ images }: Props): JSX.Element => {
+export const ImageSlider = ({ images }: Props): JSX.Element => {
   const [currentImg, setCurrentImg] = useState(0);
 
   return (
@@ -30,5 +30,3 @@ const ImageSlider = ({ images }: Props): JSX.Element => {
     </S.ImageSliderContainer>
   );
 };
-
-export default ImageSlider;

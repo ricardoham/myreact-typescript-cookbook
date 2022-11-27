@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
-import IconButton from '../../IconButton';
+import { IconButton } from '../../IconButton';
 import * as S from './styles';
 
 interface Props {
@@ -8,7 +8,10 @@ interface Props {
   onCloseModal?: () => void;
 }
 
-const ModalHeader = ({ headerTitle, onCloseModal }: Props): JSX.Element => {
+export const ModalHeader = ({
+  headerTitle,
+  onCloseModal,
+}: Props): JSX.Element => {
   return (
     <S.ModalHeaderContainer>
       <S.ModalHeaderTitle>{headerTitle}</S.ModalHeaderTitle>
@@ -16,5 +19,3 @@ const ModalHeader = ({ headerTitle, onCloseModal }: Props): JSX.Element => {
     </S.ModalHeaderContainer>
   );
 };
-
-export default ModalHeader;

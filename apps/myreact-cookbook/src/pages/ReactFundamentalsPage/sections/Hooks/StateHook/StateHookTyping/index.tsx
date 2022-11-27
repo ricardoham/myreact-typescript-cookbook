@@ -1,8 +1,6 @@
-// import CodeBlock from 'components/CodeBlock';
-import React from 'react';
-import CodeBlock from 'libs/myreact-cookbook-ui/src/lib/CodeBlock';
+import { CodeBlock } from '@myreact-cookbook/myreact-cookbook-ui';
 
-const StateHookTyping = (): JSX.Element => {
+const StateHookTyping: React.FC = () => {
   const codeString = `
   import React, { useState } from 'react';
 

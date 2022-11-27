@@ -1,18 +1,13 @@
-import Button from 'libs/myreact-cookbook-ui/src/lib/Button';
-import CodeBlock from 'libs/myreact-cookbook-ui/src/lib/CodeBlock';
-import ImageSlider from 'libs/myreact-cookbook-ui/src/lib/ImageSlider';
-import Modal from 'libs/myreact-cookbook-ui/src/lib/Modal';
-import ModalBody from 'libs/myreact-cookbook-ui/src/lib/Modal/ModalBody';
-import ModalHeader from 'libs/myreact-cookbook-ui/src/lib/Modal/ModalHeader';
 import { useState } from 'react';
-// import Button from 'components/Button';
-// import ImageSlider from 'components/ImageSlider';
-// import ModalBody from 'components/Modal/ModalBody';
-// import ModalFooter from 'components/Modal/ModalFooter';
-// import ModalHeader from 'components/Modal/ModalHeader';
-// import Modal from 'components/Modal';
+import {
+  Button,
+  CodeBlock,
+  ImageSlider,
+  Modal,
+  ModalBody,
+  ModalHeader,
+} from '@myreact-cookbook/myreact-cookbook-ui';
 import * as S from './styles';
-// import CodeBlock from 'components/CodeBlock';
 
 const Portals = (): JSX.Element => {
   const [showModal, setShowModal] = useState(false);

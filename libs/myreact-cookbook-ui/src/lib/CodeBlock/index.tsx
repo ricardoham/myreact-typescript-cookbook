@@ -6,7 +6,7 @@ interface Props {
   codeString: string;
 }
 
-const CodeBlock = ({ codeString }: Props): JSX.Element => (
+export const CodeBlock = ({ codeString }: Props): JSX.Element => (
   <SyntaxHighlighter
     language="jsx"
     style={dracula}
@@ -15,5 +15,3 @@ const CodeBlock = ({ codeString }: Props): JSX.Element => (
     {codeString}
   </SyntaxHighlighter>
 );
-
-export default CodeBlock;

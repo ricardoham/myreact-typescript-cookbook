@@ -5,12 +5,6 @@ interface Props {
   children: JSX.Element;
 }
 
-const ModalBody = ({ children }: Props): JSX.Element => {
-  return (
-    <S.ModalBodyContainer>
-      {children}
-    </S.ModalBodyContainer>
-  )
-}
-
-export default ModalBody;
+export const ModalBody = ({ children }: Props): JSX.Element => {
+  return <S.ModalBodyContainer>{children}</S.ModalBodyContainer>;
+};

@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@temp-workspace/myreact-cookbook-ui": [
+      "@myreact-cookbook/myreact-cookbook-ui": [
         "libs/myreact-cookbook-ui/src/index.ts"
       ]
     }

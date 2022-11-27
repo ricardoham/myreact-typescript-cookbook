@@ -1,6 +1,6 @@
 import React from 'react';
 import { useField } from 'formik';
-import Label from '../Label';
+import { Label } from '../Label';
 import { ErrorMessage } from './styles';
 
 interface Props {
@@ -10,7 +10,13 @@ interface Props {
   children: JSX.Element;
 }
 
-const CustomFormikField = ({ id, name, label, children, ...props }: Props): JSX.Element => {
+export const CustomFormikField = ({
+  id,
+  name,
+  label,
+  children,
+  ...props
+}: Props): JSX.Element => {
   const [field, meta] = useField({ ...props, name });
 
   return (
@@ -25,5 +31,3 @@ const CustomFormikField = ({ id, name, label, children, ...props }: Props): JSX.
     </>
   );
 };
-
-export default CustomFormikField;

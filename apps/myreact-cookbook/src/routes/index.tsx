@@ -7,7 +7,7 @@ import FormsPage from '../pages/FormsPage/Form';
 import StateManagementPage from '../pages/StateManagementPage';
 import ReactFundamentalsPage from '../pages/ReactFundamentalsPage';
 
-const Routes = (): JSX.Element => (
+const Routes: React.FC = () => (
   <Switch>
     <Route path="/" element={<About />} />
     <Route path="/react-fundamentals" element={<ReactFundamentalsPage />} />

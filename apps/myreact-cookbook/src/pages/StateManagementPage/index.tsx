@@ -1,7 +1,7 @@
 import { useAppDispatch } from '../../hooks/redux-hooks/useRedux';
 import { transitionStart } from '../../slices/transitionPageSlice';
 import { TRANSITION_PAGE_ID } from '../../constants/transition-page';
-import Button from 'libs/myreact-cookbook-ui/src/lib/Button';
+import { Button } from '@myreact-cookbook/myreact-cookbook-ui';
 
 const StateManagementPage = () => {
   const dispatch = useAppDispatch();

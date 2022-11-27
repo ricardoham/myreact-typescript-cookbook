@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import * as S from './styles';
 
 interface Props {
@@ -7,13 +7,15 @@ interface Props {
   onRemoveTag?: (tags: string[]) => void;
 }
 
-const Tags = ({ tags, onAddTag, onRemoveTag }: Props): JSX.Element => {
+export const Tags = ({ tags, onAddTag, onRemoveTag }: Props): JSX.Element => {
   const [tagText, setTagText] = useState('');
   const [tag, setTag] = useState<string[]>(tags || []);
 
   const handleAddTag = (event: string): void => {
     if (tagText !== '' && event === 'Enter') {
-      onAddTag && tags ? onAddTag([...tags, tagText]) : setTag([...tag, tagText]);
+      onAddTag && tags
+        ? onAddTag([...tags, tagText])
+        : setTag([...tag, tagText]);
       setTagText('');
       return;
     }
@@ -40,11 +42,11 @@ const Tags = ({ tags, onAddTag, onRemoveTag }: Props): JSX.Element => {
       <S.StyledTagInput
         value={tagText}
         onKeyUp={(e: { key: string }): void => handleAddTag(e.key)}
-        onChange={(e: ChangeEvent<{ value: string }>): void => setTagText(e.target.value)}
+        onChange={(e: ChangeEvent<{ value: string }>): void =>
+          setTagText(e.target.value)
+        }
         placeholder="Type to insert a Tag"
       />
     </S.StyledTag>
   );
 };
-
-export default Tags;

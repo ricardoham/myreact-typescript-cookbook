@@ -1,8 +1,10 @@
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import Button from 'libs/myreact-cookbook-ui/src/lib/Button';
-import Field from 'libs/myreact-cookbook-ui/src/lib/Field';
-import Input from 'libs/myreact-cookbook-ui/src/lib/Input';
+import {
+  Button,
+  CustomFormikField as Field,
+  Input,
+} from '@myreact-cookbook/myreact-cookbook-ui';
 import { UserModel } from '../../../models/user';
 import * as S from './styles';
 

@@ -5,7 +5,7 @@ interface Props {
   checked: boolean;
 }
 
-const Checkbox = ({ checked }: Props): JSX.Element => {
+export const Checkbox = ({ checked }: Props): JSX.Element => {
   return (
     <S.CheckBox>
       <S.CheckBoxBox>
@@ -18,5 +18,3 @@ const Checkbox = ({ checked }: Props): JSX.Element => {
     </S.CheckBox>
   );
 };
-
-export default Checkbox;

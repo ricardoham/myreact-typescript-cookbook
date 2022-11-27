@@ -9,7 +9,7 @@ export interface IconButtonProps {
   onClick?: () => void;
 }
 
-const IconButton = ({
+export const IconButton = ({
   color,
   fill,
   icon,
@@ -27,5 +27,3 @@ const IconButton = ({
     </S.IconButtonContainer>
   );
 };
-
-export default IconButton;
