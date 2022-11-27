@@ -16,6 +16,7 @@
     "@nrwl/react": {
       "application": {
         "style": "css",
+        "unitTestRunner": "jest",
         "linter": "eslint",
         "babel": true
       },
@@ -24,6 +25,7 @@
       },
       "library": {
         "style": "css",
+        "unitTestRunner": "jest",
         "linter": "eslint"
       }
     }
@@ -32,6 +34,9 @@
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"]
+    },
+    "e2e": {
+      "inputs": ["default", "^production"]
     }
   },
   "namedInputs": {

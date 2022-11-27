@@ -1,0 +1,103 @@
+{
+  "name": "myreact-cookbook",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/myreact-cookbook/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/myreact-cookbook",
+        "index": "apps/myreact-cookbook/src/index.html",
+        "baseHref": "/",
+        "main": "apps/myreact-cookbook/src/main.ts",
+        "polyfills": "apps/myreact-cookbook/src/polyfills.ts",
+        "tsConfig": "apps/myreact-cookbook/tsconfig.app.json",
+        "assets": [
+          "apps/myreact-cookbook/src/favicon.ico",
+          "apps/myreact-cookbook/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "apps/myreact-cookbook/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/myreact-cookbook/src/environments/environment.ts",
+              "with": "apps/myreact-cookbook/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "apps/myreact-cookbook/webpack.config.prod.js"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "myreact-cookbook:build",
+        "hmr": true,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "myreact-cookbook:build:development",
+          "liveReload": true
+        },
+        "production": {
+          "buildTarget": "myreact-cookbook:build:production",
+          "hmr": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/myreact-cookbook/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/myreact-cookbook/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/web:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "myreact-cookbook:build",
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "myreact-cookbook:build:development"
+        },
+        "production": {
+          "buildTarget": "myreact-cookbook:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
