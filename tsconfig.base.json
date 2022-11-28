@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@myreact-cookbook/myreact-cookbook-ui": [
+        "libs/myreact-cookbook-ui/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

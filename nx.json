@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "temp-workspace",
+  "npmScope": "myreact-cookbook",
   "affected": {
     "defaultBase": "main"
   },
