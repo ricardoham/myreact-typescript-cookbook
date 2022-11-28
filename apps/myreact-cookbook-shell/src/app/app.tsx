@@ -20,7 +20,7 @@ export function App() {
           path="/"
           element={<NxWelcome title="myreact-cookbook-shell" />}
         />
-        <Route path="/myreact-cookbook" element={<MyreactCookbook />} />
+        <Route path="/myreact-cookbook/*" element={<MyreactCookbook />} />
       </Routes>
     </React.Suspense>
   );
